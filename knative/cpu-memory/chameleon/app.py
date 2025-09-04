@@ -38,18 +38,14 @@ def update_args_from_json(args, json_data):
 @app.route('/', methods=['POST'])
 def chameleon():
 
-    json_from_request = request.json
-
-    parser = argparse.ArgumentParser()
-    args, other = parser.parse_known_args()
-    args = update_args_from_json(args, json_from_request)
+    json_from_request = request.json   # parse JSON body
+    num_of_rows = json_from_request.get("num_of_rows")
+    num_of_cols = json_from_request.get("num_of_cols")
+    metadata = json_from_request.get("metadata", None)
 
     latencies = {}
     timestamps = {}
     timestamps["starting_time"] = time()
-    num_of_rows = args.num_of_rows
-    num_of_cols = args.num_of_cols
-    metadata = getattr(args, "metadata", None)
 
     start = time()
     tmpl = PageTemplate(BIGTABLE_ZPT)
