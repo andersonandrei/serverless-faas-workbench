@@ -1,7 +1,6 @@
 import boto3
 from time import time
 import pickle
-import numpy as np
 import torch
 import rnn
 import json

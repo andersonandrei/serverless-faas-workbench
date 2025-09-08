@@ -16,6 +16,7 @@ FILE_PATH_INDEX = 2
 app = Flask(__name__)
 
 def video_processing(object_key, video_path, model_path):
+    print("Inside the function")
     file_name = object_key.split(".")[FILE_NAME_INDEX]
     result_file_path = tmp+file_name+'-detection.avi'
 
@@ -86,6 +87,10 @@ def video_processing_main():
     s3_client.download_file(model_bucket, model_object_key, model_path)    
     download_data = time() - start
     latencies["download_data"] = download_data
+
+    print("Got the data from the bucket")
+
+    print("Processing the video")
 
     function_execution, upload_path = video_processing(object_key, download_path, model_path)
     latencies["function_execution"] = download_data

@@ -1,17 +1,14 @@
 apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
-  name: rnngenerator
+  name: rnngenerate
   namespace: knative-functions
 spec:
   template:
     spec:
       containers:
-      - name: rnngenerator
-        image: docker.io/andersonandrei/functionbench-knative:rnngenerator
-        volumeMounts:
-        - name: functionbench
-          mountPath: /data
+      - name: rnngenerate
+        image: docker.io/andersonandrei/functionbench-knative:rnngenerate
         resources:  
           requests:
             cpu: 1
@@ -19,9 +16,3 @@ spec:
           limits:
             cpu: 1
             memory: 1024M               
-      volumes:
-      - name: functionbench
-        persistentVolumeClaim:
-          claimName: functionbench
-          readOnly: false
-      serviceAccountName: knative-rbac          

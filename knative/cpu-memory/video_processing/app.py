@@ -9,7 +9,6 @@ import os
 import sys
 import re
 from flask import Flask, request, jsonify
-import ops
 
 tmp = "/tmp/"
 FILE_NAME_INDEX = 0
