@@ -1,0 +1,6 @@
+function,concurrency-target-default,concurrency-target-percentage,requests-per-second-target-default,parameter_video,function_execution,iteration
+facedetection,100,50,200,big_buck_bunny_720p_30mb.mp4,,0
+facedetection,100,50,200,SampleVideo_10mb.mp4,,0
+facedetection,100,50,200,SampleVideo_30mb.mp4,,0
+facedetection,100,50,200,SampleVideo_50mb.mp4,,0
+facedetection,100,50,200,SampleVideo_100mb.mp4,,0
