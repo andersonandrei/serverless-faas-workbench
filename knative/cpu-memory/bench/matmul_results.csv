@@ -1,0 +1,6 @@
+function,concurrency-target-default,concurrency-target-percentage,requests-per-second-target-default,parameter_n,function_execution,iteration
+matmul,100,50,200,100,0.0001595020294189453,0
+matmul,100,50,200,1000,0.14336585998535156,0
+matmul,100,50,200,2000,1.35361909866333,0
+matmul,100,50,200,4000,9.372194051742554,0
+matmul,100,50,200,6000,28.883448123931885,0

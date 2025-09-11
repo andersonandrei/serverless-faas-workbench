@@ -1,0 +1,5 @@
+function,concurrency-target-default,concurrency-target-percentage,requests-per-second-target-default,parameter_n,function_execution,iteration
+floatoperation,100,50,200,1000000,0.3509867191314697,0
+floatoperation,100,50,200,10000000,3.1948390007019043,0
+floatoperation,100,50,200,100000000,31.91461992263794,0
+floatoperation,100,50,200,500000000,232.83313584327698,0
